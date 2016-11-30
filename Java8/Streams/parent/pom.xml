@@ -28,6 +28,8 @@
         <module>../filter</module>
         <module>../lib</module>
         <module>../iteration</module>
+        <module>../agregate</module>
+        <module>collecting</module>
     </modules>
 
 </project>
