@@ -26,7 +26,7 @@ public class PetController {
 
     @GetMapping("")
     @ApiOperation("Get all Pets")
-    @ApiResponses(value={@ApiResponse(code=200, message="OK", response = Pet.class)})
+    @ApiResponses(value={@ApiResponse(code=200, message="OK", response = Pet.class, responseContainer = "List")})
     public List<Pet> getPets() {
         Pet pet = new Pet();
         pet.setId(1);
