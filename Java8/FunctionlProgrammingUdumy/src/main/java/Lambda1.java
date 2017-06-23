@@ -28,11 +28,11 @@ public class Lambda1 {
 		Comparator<Employee> byNameLambda3 =
 			(a, b) -> a.getName().compareTo(b.getName());
 			
-			
+		/*
 		// You cannot remove braces and leave 'return'
 		Comparator<Employee> byNameLambda4 =
 			(a, b) -> return a.getName().compareTo(b.getName());
-			
+		*/
 			
 			
 		// Expression with no parameters

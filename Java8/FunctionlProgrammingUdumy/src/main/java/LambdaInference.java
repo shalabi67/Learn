@@ -10,30 +10,20 @@ public class LambdaInference {
 		// Standard syntax
 		Consumer<String> c1 = msg -> System.out.println(msg.length());
 		
-		
+
+		/*
 		// Compile-time error: not enough info
 		Object x1 = msg -> System.out.println(msg.length());
 				
 		
 		// Compile-time error: not enough info
 		Object x2 = (String msg) -> System.out.println(msg.length());
-		
+		*/
 		
 		// OK: cast added
 		Object x3 = (Consumer<String>) ((String msg) -> System.out.println(msg.length()));
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 		// *** Part 2: identify parameter types
 
@@ -41,10 +31,11 @@ public class LambdaInference {
 		// OK: but inferred parameter type is Object
 		Consumer<?> c2 = msg -> System.out.println(msg);
 		
-		
+
+		/*
 		// Compile-time error: Inference is *not* based on body of lambda
 		Consumer<?> c3 = msg -> System.out.println(msg.length());
-		
+		*/
 		
 		// OK: added manifest type to parameter
 		Consumer<?> c4 = (String msg) -> System.out.println(msg.length());
@@ -89,11 +80,12 @@ public class LambdaInference {
 		Manager test2 = testWithNull(manager ->
 			new Manager(manager.getName(), manager.getSalary(), 2*manager.getBonus()));
 
-		
+
+		/*
 		// Compile-time error: Inference is not based on body of lambda
 		Employee test3 = testWithNull(manager ->
 			new Manager(manager.getName(), manager.getSalary(), 2*manager.getBonus()));
-				
+		*/
 		
 	}
 

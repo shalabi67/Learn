@@ -20,24 +20,7 @@ public class MethodReferences {
 		// Nothing special about 'Supplier'...
 		ThreadSupplier ts = Thread::currentThread;
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 		// Instance method (instance specified)
 		Employee frank = new Employee("Frank", 3000);
@@ -46,43 +29,17 @@ public class MethodReferences {
 		Supplier<Integer> s2 = frank::getSalary;		
 		
 		System.out.println(s2.get());
-		
-		
-		
-		
+
 		
 		// A common instance method (instance specified)
 		Consumer<String> c1 = System.out::println;
 
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		// An instance method (instance not specified)
 		Function<Employee,Integer> f1 = Employee::getSalary;
 		
 		Integer frankSalary = f1.apply(frank);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 		
 		// A useful application: building a comparator based on a field
