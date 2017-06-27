@@ -1,0 +1,6 @@
+Example One
+Have a list of Employees we want to
+   1- find employees whome age > n
+   2- find employes whome first name = some name.
+   3- find employes whome last name = some name.
+
