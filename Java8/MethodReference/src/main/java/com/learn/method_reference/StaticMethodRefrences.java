@@ -11,6 +11,9 @@ public class StaticMethodRefrences {
         Consumer<String> staticExample = StaticMethodRefrences::showStaticExample;
         staticExample.accept("Method Reference for Static");
 
+        Supplier<Thread> currentThreadReference = Thread::currentThread;
+        System.out.println("The current thread is " + currentThreadReference.get().getName());  //This should print current thread
+
     }
 
     private static void showStaticExample(String header) {
