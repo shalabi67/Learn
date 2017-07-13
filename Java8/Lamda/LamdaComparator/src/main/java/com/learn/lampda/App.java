@@ -2,6 +2,7 @@ package com.learn.lampda;
 
 
 import com.learn.lampda.comparator_example.FirstSolution;
+import com.learn.lampda.comparator_example.FourthSolution;
 import com.learn.lampda.comparator_example.SecondSolution;
 import com.learn.lampda.comparator_example.ThirdSolution;
 
@@ -21,7 +22,8 @@ public class App
 
         //FirstSolution.demo();
         //SecondSolution.demo();
-        ThirdSolution.demo();
+        //ThirdSolution.demo();
+        FourthSolution.demo();
 
 
     }

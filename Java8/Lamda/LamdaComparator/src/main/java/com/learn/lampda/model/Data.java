@@ -8,4 +8,7 @@ import com.learn.lampda.model.Person;
 public class Data {
     public static Person personOne = new Person("mohammad", "shalabi", 50);
     public static Person personTwo = new Person("mohammad", "ahmad", 50);
+
+    public static Employee employeeOne = new Employee("mohammad", "shalabi", 50);
+    public static Employee employeeTwo = new Employee("mohammad", "Ahmad", 53);
 }
