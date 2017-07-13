@@ -1,10 +1,7 @@
 package com.learn.lampda;
 
 
-import com.learn.lampda.comparator_example.FirstSolution;
-import com.learn.lampda.comparator_example.FourthSolution;
-import com.learn.lampda.comparator_example.SecondSolution;
-import com.learn.lampda.comparator_example.ThirdSolution;
+import com.learn.lampda.comparator_example.*;
 
 /**
  * Hello world!
@@ -23,7 +20,9 @@ public class App
         //FirstSolution.demo();
         //SecondSolution.demo();
         //ThirdSolution.demo();
-        FourthSolution.demo();
+        //FourthSolution.demo();
+        //FifthSolution.demo();
+        SixthSolution.demo();
 
 
     }
