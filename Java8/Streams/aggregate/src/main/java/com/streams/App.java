@@ -21,6 +21,7 @@ public class App {
         tradersFromCambridge();
         traderNames();
         anyTradersInMilan();
+        traderLivingInCambridge();
     }
     private static void sumOfCalories() {
         List<Dish> list = Dish.createDishes();
@@ -91,7 +92,15 @@ public class App {
 
 
     //Print all transactions’ values from the traders living in Cambridge.
+    private static void traderLivingInCambridge() {
+        System.out.println("----------------------------------------------------------------------");
+        System.out.println("Print all transactions’ values from the traders living in Cambridge.");
+        List<Transaction> transactions = Transaction.create().stream()
+                .filter(t -> t.getTrader().getCity().equals("Cambridge"))
+                .collect(Collectors.toList());
 
+        transactions.forEach(System.out::println);
+    }
 
     //What’s the highest value of all the transactions?
 

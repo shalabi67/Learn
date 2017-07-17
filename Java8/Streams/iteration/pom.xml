@@ -14,8 +14,8 @@
 
     <dependencies>
         <dependency>
-            <artifactId>lib</artifactId>
             <groupId>com.streams</groupId>
+            <artifactId>lib</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
