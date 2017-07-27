@@ -19,6 +19,10 @@ public class FirstSolution {
         Comparator<Person> function = Comparator.comparing(Person::getAge);
         Output.printResult(compare(Data.personOne, Data.personTwo, function));
 
+        function = (p1, p2) -> p1.getAge().equals(p2.getAge());
+        Output.printResult(compare(Data.personOne, Data.personTwo, function));
+
+
         function = Comparator.comparing(Person::getFirstName);
         Output.printResult(compare(Data.personOne, Data.personTwo, function));
 
