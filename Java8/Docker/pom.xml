@@ -18,6 +18,14 @@
                         <artifactId>docker-maven-plugin</artifactId>
                         <version>0.21.0</version>
                         <configuration>
+                            <dockerHost>tcp://192.168.99.100:2376</dockerHost>
+                            <certPath>E:\Users\mohammad\.docker\machine\machines\default</certPath>
+
+                            <authConfig>
+                                <username>shalabi</username>
+                                <password>Put password here</password>
+                            </authConfig>
+                            <registry>registry.hub.docker.com/shalabi</registry>
                             <images>
                                 <image>
                                     <name>hello-java</name>
@@ -26,11 +34,11 @@
                                         <assembly>
                                             <descriptorRef>artifact</descriptorRef>
                                         </assembly>
-                                        <cmd>java -cp maven/${project.name}-${project.version}.jar org.examples.java.App</cmd>
+                                        <cmd>java -cp maven/${project.name}-${project.version}.jar com.docker.training.Application</cmd>
                                     </build>
                                     <run>
                                         <wait>
-                                            <log>Hello World!</log>
+                                            <log>Hello docker</log>
                                         </wait>
                                     </run>
                                 </image>
@@ -60,12 +68,12 @@
     </profiles>
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/io.fabric8/docker-maven-plugin -->
+        <!-- https://mvnrepository.com/artifact/io.fabric8/docker-maven-plugin
         <dependency>
             <groupId>io.fabric8</groupId>
             <artifactId>docker-maven-plugin</artifactId>
             <version>0.21.0</version>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 </project>
