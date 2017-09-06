@@ -1,0 +1,11 @@
+We have an array of strings and we want to return the last word of every string concateinated by " & "
+For example:
+food = new String[] {
+        "Crunchy carrots",
+        "Golden-hued bananas",
+        "",
+        "Bright orange pumpkins",
+        "Little trees of broccoli",
+        "meat"
+Output
+"carrots & bananas & pumpkins & broccoli & meat"
