@@ -12,5 +12,13 @@ public class Application {
         };
 
         System.out.println(Words.joinLastWords(food));
+
+        //notice here two words will return since the empty strings got counted.
+        System.out.println(Words.joinLastWords_OnlyFromFirstThreeStrings(food));
+
+        //notice here that three words will return.
+        System.out.println(Words.joinLastWords_OnlyFromFirstThreeNonEmptyStrings(food));
+
+        //System.out.println(Words.joinLastWordsWithLoging(food));
     }
 }

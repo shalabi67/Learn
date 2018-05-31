@@ -35,6 +35,8 @@
         <module>iteration</module>
         <module>aggregate</module>
         <module>collecting</module>
+        <module>sales-challange</module>
+        <module>java-programming-challenges</module>
     </modules>
 
 </project>
