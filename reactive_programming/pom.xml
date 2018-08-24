@@ -38,6 +38,13 @@
       <version>10.14.2.0</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-jaxrs -->
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-jaxrs</artifactId>
+      <version>1.9.13</version>
+    </dependency>
+
 
     <dependency>
       <groupId>junit</groupId>
