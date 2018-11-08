@@ -13,7 +13,18 @@ import java.sql.SQLException;
 public class TestDatabaseProcedures {
 
     public Observable<Customer> toSelectCustomersObservable() throws SQLException {
-
+        return null;
+        /*
+        Observable.using((subscription) -> {
+            return null;
+            try {
+                return SQLHelper.executeQuery(subscription, "SELECT ID, USERNAME FROM CUSTOMER", (resultSet) -> {
+                    return new Customer(resultSet.getLong("ID"), resultSet.getString("USERNAME"));
+                });
+            } catch (SQLException e) {
+                throw new RuntimeException(e.getMessage(), e);
+            }
+        }, );
         return Observable.using(TestDatabase::createSubscription, (subscription) -> {
             try {
                 return SQLHelper.executeQuery(subscription, "SELECT ID, USERNAME FROM CUSTOMER", (resultSet) -> {
@@ -22,11 +33,12 @@ public class TestDatabaseProcedures {
             } catch (SQLException e) {
                 throw new RuntimeException(e.getMessage(), e);
             }
-        });
+        });*/
     }
 
     public Observable<Customer> toSelectCustomersObservable(long customerId) throws SQLException {
-
+        return null;
+        /*
         return Observable.using(TestDatabase::createSubscription, (subscription) -> {
             try {
                 System.out.println( "Select Customer: " + Thread.currentThread().getName());
@@ -36,11 +48,12 @@ public class TestDatabaseProcedures {
             } catch (SQLException e) {
                 throw new RuntimeException(e.getMessage(), e);
             }
-        });
+        });*/
     }
 
     public Observable<OwnedProduct> toSelectOwnedProductObservable(long customerId) throws SQLException {
-
+        return null;
+        /*
         return Observable.using(TestDatabase::createSubscription, (subscription) -> {
             try {
                 System.out.println( "Select Products: " + Thread.currentThread().getName());
@@ -53,10 +66,12 @@ public class TestDatabaseProcedures {
                 throw new RuntimeException(e.getMessage(), e);
             }
         });
+        */
     }
 
     public Observable<Address> toSelectAddressObservable(long customerId) throws SQLException {
-
+        return null;
+        /*
         return Observable.using(TestDatabase::createSubscription, (subscription) -> {
             try {
                 System.out.println( "Select Address: " + Thread.currentThread().getName());
@@ -75,5 +90,6 @@ public class TestDatabaseProcedures {
                 throw new RuntimeException(e.getMessage(), e);
             }
         });
+        */
     }
 }

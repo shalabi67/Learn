@@ -43,7 +43,7 @@ public class CustomerService {
         // Wrap the concat'ed dataStream in another observable.  This makes it an 
         // Observable< Observable< CustomerRelatedData> > which is the shape we need
         // for the zip function that follows.
-        Observable<Observable<CustomerRelatedData>> wrappedDataStream = Observable.(dataStream);
+        Observable<Observable<CustomerRelatedData>> wrappedDataStream = Observable.just(dataStream);
                 
         // Create an accumulation object so that we can use "zip" to collapse items into a single unified Customer instance.
         CustomerZipAccumulator accum = new CustomerZipAccumulator();
@@ -51,7 +51,7 @@ public class CustomerService {
         // Collapse the customer related data (Customer and Addresses) into a single customer with combined data.
         Observable<Customer> finalObservable = Observable
                 .zip(wrappedDataStream, accum::collapseCustomerEvents)
-                .last();
+                .takeLast(1);
 
         return finalObservable;
     }

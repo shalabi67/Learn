@@ -1,13 +1,16 @@
 package com.learn.reactive_programming.examples.dataaccess.server;
 
+import io.reactivex.disposables.Disposable;
+import org.reactivestreams.Subscription;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashSet;
-import rx.Subscription;
+//import rx.Subscription;
 
-public class ConnectionSubscription implements Subscription {
+public class ConnectionSubscription implements Disposable {
     
     private final Connection connection;
     private final HashSet<Statement> statements = new HashSet<>();
@@ -16,9 +19,9 @@ public class ConnectionSubscription implements Subscription {
     public ConnectionSubscription(Connection connection) {
         this.connection = connection;
     }
-    
+
     @Override
-    public void unsubscribe() {
+    public void dispose() {
         resultSets.stream().forEach((rs) -> {
             try { rs.close(); } catch( SQLException t ) {}
         });
@@ -29,6 +32,11 @@ public class ConnectionSubscription implements Subscription {
         if( connection != null ) {
             try { connection.close(); } catch( SQLException e ) {}
         }
+    }
+
+    @Override
+    public boolean isDisposed() {
+        return true;
     }
 
     public Connection getConnection() {
